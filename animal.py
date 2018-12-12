@@ -85,4 +85,4 @@ zoo.show_animals()
 # Bessie the cow
 # Moo!
 
-# zoo.add("bad value") # should raise an exception
+zoo.add("bad value") # should raise an exception
