@@ -18,7 +18,7 @@ class Tiger(Animal):
     # species = "the tiger"
 
     def __init__(self, name):
-        self.name = name
+        super.__init__(name)
         self.species="the tiger"
 
     def make_noise(self):
@@ -30,7 +30,7 @@ class Dog(Animal):
     # species = "the dog"
 
     def __init__(self, name):
-        self.name = name
+        super.__init__(name)
         self.species="the dog"
 
     def make_noise(self):
@@ -41,7 +41,7 @@ class Cow(Animal):
     # species = "the cow"
 
     def __init__(self, name):
-        self.name = name
+        super.__init__(name)
         self.species="the cow"
 
     def make_noise(self):
