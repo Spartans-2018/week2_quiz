@@ -3,10 +3,11 @@ import inspect
 class Animal:
     """Animal has a property called "species" and a property called "name". "species" is initialized to None, "name" is set by an argument to the constructor."""
 
-    species = "None"
+    # species = "None"
 
     def __init__(self, name):
         self.name = name
+        self.species = "None"
         
     def make_noise(self):
         # print()
@@ -14,7 +15,11 @@ class Animal:
 
 # Tiger's species property is "tiger" and its "make_noise()" method prints out "Roar!"
 class Tiger(Animal):
-    species = "the tiger"
+    # species = "the tiger"
+
+    def __init__(self, name):
+        self.name = name
+        self.species="the tiger"
 
     def make_noise(self):
         return("Roar!")
@@ -22,14 +27,22 @@ class Tiger(Animal):
 
 # Dog's species property is "dog" and its "make_noise()" method prints out "Bark!"
 class Dog(Animal):
-    species = "the dog"
+    # species = "the dog"
+
+    def __init__(self, name):
+        self.name = name
+        self.species="the dog"
 
     def make_noise(self):
         return("Bark!")
 
 # Cow' species property is "cow" and its "make_noise()" method prints out "Moo!"
 class Cow(Animal):
-    species = "the cow"
+    # species = "the cow"
+
+    def __init__(self, name):
+        self.name = name
+        self.species="the cow"
 
     def make_noise(self):
         return("Moo!")
@@ -42,7 +55,7 @@ class Zoo:
         pass
 
     def add(self, animal):
-        if(inspect.isclass(animal)):
+        if(isinstance(animal, Animal)):
             return self.animals.append(animal)
         else:
             # instance of Animal or subclass
@@ -72,4 +85,4 @@ zoo.show_animals()
 # Bessie the cow
 # Moo!
 
-zoo.add("bad value") # should raise an exception
+# zoo.add("bad value") # should raise an exception
