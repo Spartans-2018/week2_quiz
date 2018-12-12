@@ -1,8 +1,8 @@
-import inspect
+#import inspect
 
 
 class Animal:
-    species=None
+    #species=None
     def __init__(self, name):
         self.name=name
         self.species=None
@@ -12,8 +12,7 @@ class Tiger(Animal):
 
     def __init__(self, name):
         self.name=name
-        self.species="the Tiger"
-
+        self.species="Tiger"
 
     def make_noise(self):
         print("Roar!")
@@ -22,25 +21,22 @@ class Dog(Animal):
 
     def __init__(self, name):
         self.name=name
-        self.species="The Dog"
+        self.species="Dog"
 
     def make_noise(self):
         print("Bark!")
 
 class Cow(Animal):
 
-
     def __init__(self, name):
         self.name=name
-        self.species="The Cow"
-
+        self.species="Cow"
 
     def make_noise(self):
         print("Moo!")
 
 
 class Zoo:
-
 
     def __init__(self):
         self.animals=[]
@@ -54,9 +50,9 @@ class Zoo:
 
 
     def show_animals(self):
-
         for item in self.animals:
-            print(item.name, item.species)
+            #print(item.name, item.species)
+            print('{} the {}'. format(item.name, item.species))
             item.make_noise()
 
 
@@ -73,4 +69,4 @@ zoo.add(molly)
 zoo.add(bessie)
 
 zoo.show_animals()
-zoo.add(lion)
+#zoo.add(lion)
